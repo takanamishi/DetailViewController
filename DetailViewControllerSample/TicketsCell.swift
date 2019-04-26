@@ -9,4 +9,17 @@
 import UIKit
 
 class TicketsCell: UITableViewCell {
+    @IBOutlet weak var ticketsStackView: UIStackView!
+    
+    func setup(tickets: [String]) {
+        for view in ticketsStackView.arrangedSubviews {
+            ticketsStackView.removeArrangedSubview(view)
+        }
+
+        for ticket in tickets {
+            let view = TicketView()
+            view.setup(name: ticket)
+            ticketsStackView.addArrangedSubview(view)
+        }
+    }
 }

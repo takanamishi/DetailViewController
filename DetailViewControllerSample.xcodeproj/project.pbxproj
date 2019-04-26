@@ -12,6 +12,8 @@
 		5D6B06682272CBA800B0E542 /* BasicInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D6B06672272CBA800B0E542 /* BasicInformationCell.xib */; };
 		5D6B066A2272CCAD00B0E542 /* ExperiencesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6B06692272CCAD00B0E542 /* ExperiencesCell.swift */; };
 		5D6B066C2272CCB800B0E542 /* ExperiencesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D6B066B2272CCB800B0E542 /* ExperiencesCell.xib */; };
+		5D6B06712272D83400B0E542 /* TicketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D6B066F2272D83400B0E542 /* TicketView.xib */; };
+		5D6B06722272D83400B0E542 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6B06702272D83400B0E542 /* TicketView.swift */; };
 		5DADA6EF2272970D00ADB8D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA6EE2272970D00ADB8D5 /* AppDelegate.swift */; };
 		5DADA6F12272970D00ADB8D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA6F02272970D00ADB8D5 /* ViewController.swift */; };
 		5DADA6F42272970D00ADB8D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA6F22272970D00ADB8D5 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		5D6B06672272CBA800B0E542 /* BasicInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicInformationCell.xib; sourceTree = "<group>"; };
 		5D6B06692272CCAD00B0E542 /* ExperiencesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencesCell.swift; sourceTree = "<group>"; };
 		5D6B066B2272CCB800B0E542 /* ExperiencesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperiencesCell.xib; sourceTree = "<group>"; };
+		5D6B066F2272D83400B0E542 /* TicketView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketView.xib; sourceTree = "<group>"; };
+		5D6B06702272D83400B0E542 /* TicketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
 		5DADA6EB2272970D00ADB8D5 /* DetailViewControllerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetailViewControllerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DADA6EE2272970D00ADB8D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DADA6F02272970D00ADB8D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,14 +96,16 @@
 			children = (
 				5DADA6EE2272970D00ADB8D5 /* AppDelegate.swift */,
 				5DADA6F02272970D00ADB8D5 /* ViewController.swift */,
+				5D6B06702272D83400B0E542 /* TicketView.swift */,
+				5D6B066F2272D83400B0E542 /* TicketView.xib */,
+				5DADA7042272AC1B00ADB8D5 /* TicketsCell.swift */,
+				5DADA7062272AC2200ADB8D5 /* TicketsCell.xib */,
 				5D6B06692272CCAD00B0E542 /* ExperiencesCell.swift */,
 				5D6B066B2272CCB800B0E542 /* ExperiencesCell.xib */,
 				5D6B06652272CB9E00B0E542 /* BasicInformationCell.swift */,
 				5D6B06672272CBA800B0E542 /* BasicInformationCell.xib */,
 				5DADA7092272BF4D00ADB8D5 /* PageLinkView.swift */,
 				5DADA7082272BF4D00ADB8D5 /* PageLinkView.xib */,
-				5DADA7042272AC1B00ADB8D5 /* TicketsCell.swift */,
-				5DADA7062272AC2200ADB8D5 /* TicketsCell.xib */,
 				5DADA70022729A3C00ADB8D5 /* ImageViewCell.swift */,
 				5DADA70222729A4500ADB8D5 /* ImageViewCell.xib */,
 				5DADA6F22272970D00ADB8D5 /* Main.storyboard */,
@@ -183,6 +189,7 @@
 				5DADA70322729A4500ADB8D5 /* ImageViewCell.xib in Resources */,
 				5DADA6F92272970F00ADB8D5 /* LaunchScreen.storyboard in Resources */,
 				5D6B06682272CBA800B0E542 /* BasicInformationCell.xib in Resources */,
+				5D6B06712272D83400B0E542 /* TicketView.xib in Resources */,
 				5DADA6F62272970F00ADB8D5 /* Assets.xcassets in Resources */,
 				5DADA6F42272970D00ADB8D5 /* Main.storyboard in Resources */,
 				5D6B066C2272CCB800B0E542 /* ExperiencesCell.xib in Resources */,
@@ -249,6 +256,7 @@
 			files = (
 				5DADA6F12272970D00ADB8D5 /* ViewController.swift in Sources */,
 				5D6B06662272CB9E00B0E542 /* BasicInformationCell.swift in Sources */,
+				5D6B06722272D83400B0E542 /* TicketView.swift in Sources */,
 				5DADA70122729A3C00ADB8D5 /* ImageViewCell.swift in Sources */,
 				5DADA70B2272BF4D00ADB8D5 /* PageLinkView.swift in Sources */,
 				5DADA6EF2272970D00ADB8D5 /* AppDelegate.swift in Sources */,

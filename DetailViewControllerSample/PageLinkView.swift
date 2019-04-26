@@ -71,8 +71,10 @@ class PageLinkView: UIView {
         ticketButton.isSelected = false
         ticketButtonBottomLineView.backgroundColor = UIColor.white
     }
-    
-    private func initFromNib() {
+}
+
+extension UIView {
+    func initFromNib() {
         let bundle = Bundle(for: type(of: self))
         let className = String(describing: type(of: self))
         let nib = UINib(nibName: className, bundle: bundle)
@@ -81,12 +83,12 @@ class PageLinkView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         let bindings = ["view": view]
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|",
-                                                                      options:NSLayoutConstraint.FormatOptions(rawValue: 0),
-                                                                      metrics:nil,
-                                                                      views: bindings))
+                                                      options:NSLayoutConstraint.FormatOptions(rawValue: 0),
+                                                      metrics:nil,
+                                                      views: bindings))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|",
-                                                                      options:NSLayoutConstraint.FormatOptions(rawValue: 0),
-                                                                      metrics:nil,
-                                                                      views: bindings))
+                                                      options:NSLayoutConstraint.FormatOptions(rawValue: 0),
+                                                      metrics:nil,
+                                                      views: bindings))
     }
 }

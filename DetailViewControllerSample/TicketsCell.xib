@@ -11,39 +11,56 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="859" id="enL-uW-tFR" customClass="TicketsCell" customModule="DetailViewControllerSample" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="437" height="859"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="480" id="enL-uW-tFR" customClass="TicketsCell" customModule="DetailViewControllerSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="480"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="enL-uW-tFR" id="Szz-Lr-z4a">
-                <rect key="frame" x="0.0" y="0.0" width="437" height="858.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="441" height="479.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVI-kn-Sqy">
-                        <rect key="frame" x="0.0" y="0.0" width="437" height="500"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TW-M7-a0F" userLabel="Border View">
+                        <rect key="frame" x="20" y="20" width="401" height="439.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="チケット" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHs-Hi-pwt">
-                                <rect key="frame" x="20" y="20" width="121.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ica-5S-oR5">
+                                <rect key="frame" x="20" y="20" width="361" height="399.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="チケットのタイトルが入ります■□■□■□■□■□" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4A-e8-fZf">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="43"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-nP-SjT">
+                                        <rect key="frame" x="0.0" y="53" width="361" height="346.5"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.28627450980000002" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WHs-Hi-pwt" firstAttribute="leading" secondItem="SVI-kn-Sqy" secondAttribute="leading" constant="20" id="CPs-Hv-tZi"/>
-                            <constraint firstItem="WHs-Hi-pwt" firstAttribute="top" secondItem="SVI-kn-Sqy" secondAttribute="top" constant="20" id="sAU-ee-eGK"/>
-                            <constraint firstAttribute="height" constant="500" id="uFn-Rq-y6t"/>
+                            <constraint firstAttribute="bottom" secondItem="Ica-5S-oR5" secondAttribute="bottom" constant="20" id="79h-Lq-LsN"/>
+                            <constraint firstAttribute="trailing" secondItem="Ica-5S-oR5" secondAttribute="trailing" constant="20" id="EdD-4g-MHL"/>
+                            <constraint firstItem="Ica-5S-oR5" firstAttribute="leading" secondItem="1TW-M7-a0F" secondAttribute="leading" constant="20" id="GtW-xy-1cB"/>
+                            <constraint firstItem="Ica-5S-oR5" firstAttribute="top" secondItem="1TW-M7-a0F" secondAttribute="top" constant="20" id="Srp-Vy-cG4"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="SVI-kn-Sqy" firstAttribute="top" secondItem="Szz-Lr-z4a" secondAttribute="top" id="JMe-kE-xFm"/>
-                    <constraint firstItem="SVI-kn-Sqy" firstAttribute="leading" secondItem="Szz-Lr-z4a" secondAttribute="leading" id="cQO-4T-Avn"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SVI-kn-Sqy" secondAttribute="bottom" id="wTj-jZ-3xf"/>
-                    <constraint firstAttribute="trailing" secondItem="SVI-kn-Sqy" secondAttribute="trailing" id="zd6-cm-ojv"/>
+                    <constraint firstAttribute="trailing" secondItem="1TW-M7-a0F" secondAttribute="trailing" constant="20" id="Xoy-Gg-Bwg"/>
+                    <constraint firstAttribute="bottom" secondItem="1TW-M7-a0F" secondAttribute="bottom" constant="20" id="cds-ES-4u5"/>
+                    <constraint firstItem="1TW-M7-a0F" firstAttribute="leading" secondItem="Szz-Lr-z4a" secondAttribute="leading" constant="20" id="mIy-AS-W8f"/>
+                    <constraint firstItem="1TW-M7-a0F" firstAttribute="top" secondItem="Szz-Lr-z4a" secondAttribute="top" constant="20" id="sVL-K1-aKP"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="138.40579710144928" y="322.43303571428572"/>
+            <connections>
+                <outlet property="ticketsStackView" destination="wbc-nP-SjT" id="odj-kY-mP9"/>
+            </connections>
+            <point key="canvasLocation" x="141.30434782608697" y="195.53571428571428"/>
         </tableViewCell>
     </objects>
 </document>

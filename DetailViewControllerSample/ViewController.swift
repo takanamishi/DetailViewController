@@ -99,6 +99,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .tickets:
             let cell = tableView.dequeueReusableCell(withClass: TicketsCell.self, for: indexPath)
+            let tickets: [String]
+            if indexPath.row == 0 {
+                tickets = ["Aチケット", "Bチケット"]
+            } else {
+                tickets = ["Cチケット", "Dチケット", "Eチケット"]
+            }
+            cell.setup(tickets: tickets)
             return cell
         }
     }
