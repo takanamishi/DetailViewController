@@ -14,6 +14,8 @@
 		5DADA6F92272970F00ADB8D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA6F72272970F00ADB8D5 /* LaunchScreen.storyboard */; };
 		5DADA70122729A3C00ADB8D5 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA70022729A3C00ADB8D5 /* ImageViewCell.swift */; };
 		5DADA70322729A4500ADB8D5 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA70222729A4500ADB8D5 /* ImageViewCell.xib */; };
+		5DADA7052272AC1B00ADB8D5 /* TicketsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADA7042272AC1B00ADB8D5 /* TicketsCell.swift */; };
+		5DADA7072272AC2200ADB8D5 /* TicketsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DADA7062272AC2200ADB8D5 /* TicketsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		5DADA6FA2272970F00ADB8D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DADA70022729A3C00ADB8D5 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		5DADA70222729A4500ADB8D5 /* ImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
+		5DADA7042272AC1B00ADB8D5 /* TicketsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsCell.swift; sourceTree = "<group>"; };
+		5DADA7062272AC2200ADB8D5 /* TicketsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			children = (
 				5DADA6EE2272970D00ADB8D5 /* AppDelegate.swift */,
 				5DADA6F02272970D00ADB8D5 /* ViewController.swift */,
+				5DADA7042272AC1B00ADB8D5 /* TicketsCell.swift */,
+				5DADA7062272AC2200ADB8D5 /* TicketsCell.xib */,
 				5DADA70022729A3C00ADB8D5 /* ImageViewCell.swift */,
 				5DADA70222729A4500ADB8D5 /* ImageViewCell.xib */,
 				5DADA6F22272970D00ADB8D5 /* Main.storyboard */,
@@ -128,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DADA7072272AC2200ADB8D5 /* TicketsCell.xib in Resources */,
 				5DADA70322729A4500ADB8D5 /* ImageViewCell.xib in Resources */,
 				5DADA6F92272970F00ADB8D5 /* LaunchScreen.storyboard in Resources */,
 				5DADA6F62272970F00ADB8D5 /* Assets.xcassets in Resources */,
@@ -145,6 +152,7 @@
 				5DADA6F12272970D00ADB8D5 /* ViewController.swift in Sources */,
 				5DADA70122729A3C00ADB8D5 /* ImageViewCell.swift in Sources */,
 				5DADA6EF2272970D00ADB8D5 /* AppDelegate.swift in Sources */,
+				5DADA7052272AC1B00ADB8D5 /* TicketsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

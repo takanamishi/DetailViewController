@@ -26,17 +26,30 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="7tT-Xs-iu0"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hM8-Nx-WFY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="86W-DG-xt1">
+                                        <barButtonItem key="leftBarButtonItem" image="icon_back" id="sJO-2e-XVd"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="zCc-Wf-GUn"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XP8-cR-v7U" secondAttribute="trailing" id="6NV-tv-jHy"/>
+                            <constraint firstItem="hM8-Nx-WFY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GuC-FY-qsv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XP8-cR-v7U" secondAttribute="bottom" id="glQ-Ug-kp1"/>
+                            <constraint firstItem="hM8-Nx-WFY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="reZ-Gg-ark"/>
+                            <constraint firstItem="hM8-Nx-WFY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uda-UW-hIP"/>
                             <constraint firstItem="XP8-cR-v7U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wiW-uk-Mrz"/>
                             <constraint firstItem="XP8-cR-v7U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xmV-RG-oFJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="navigationBar" destination="hM8-Nx-WFY" id="Syj-Kb-KcL"/>
                         <outlet property="scrollViewTopConstraint" destination="wiW-uk-Mrz" id="dx5-bg-icP"/>
                         <outlet property="tableView" destination="XP8-cR-v7U" id="AgK-gX-t8X"/>
                     </connections>
@@ -45,4 +58,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_back" width="11" height="19"/>
+    </resources>
 </document>
