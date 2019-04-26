@@ -19,9 +19,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVI-kn-Sqy">
-                        <rect key="frame" x="0.0" y="0.0" width="437" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="437" height="500"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="チケット" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHs-Hi-pwt">
+                                <rect key="frame" x="20" y="20" width="121.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.28627450980000002" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="800" id="uFn-Rq-y6t"/>
+                            <constraint firstItem="WHs-Hi-pwt" firstAttribute="leading" secondItem="SVI-kn-Sqy" secondAttribute="leading" constant="20" id="CPs-Hv-tZi"/>
+                            <constraint firstItem="WHs-Hi-pwt" firstAttribute="top" secondItem="SVI-kn-Sqy" secondAttribute="top" constant="20" id="sAU-ee-eGK"/>
+                            <constraint firstAttribute="height" constant="500" id="uFn-Rq-y6t"/>
                         </constraints>
                     </view>
                 </subviews>

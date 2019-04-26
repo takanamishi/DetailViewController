@@ -1,16 +1,12 @@
 import UIKit
-import RxCocoa
-import RxSwift
 
 protocol PageLinkActionable : class {
     func jump(sectionType: ViewController.SectionType)
 }
 
 class PageLinkView: UIView {
-    private(set) var buttonTypeRelay = BehaviorRelay<ViewController.SectionType>(value: .image)
     private weak var delegate: PageLinkActionable?
-    private let disposeBag = DisposeBag()
-    
+
     @IBOutlet weak var experienceButton: UIButton!
     @IBOutlet weak var experienceButtonBottomLineView: UIView!
     @IBOutlet weak var detailButton: UIButton!
@@ -29,49 +25,36 @@ class PageLinkView: UIView {
         initFromNib()
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        buttonTypeRelay.subscribe(onNext: { [weak self] type in
-            self?.changeDisplay(type: type)
-        }).disposed(by: disposeBag)
-    }
-    
     func setup(delegate: PageLinkActionable?) {
         self.delegate = delegate
-//        buttonTypeRelay.accept(.detail)
+        changeDisplay(type: .basicInformation)
     }
     
     @IBAction func experienceClicked() {
-//        delegate?.jump(sectionType: .experiences)
-//        buttonTypeRelay.accept(.experiences)
+        delegate?.jump(sectionType: .experiences)
+        changeDisplay(type: .experiences)
     }
     
-    @IBAction func detailClicked() {
-//        delegate?.jump(sectionType: .detail)
-//        buttonTypeRelay.accept(.detail)
+    @IBAction func basicInformationClicked() {
+        delegate?.jump(sectionType: .basicInformation)
+        changeDisplay(type: .basicInformation)
     }
     
     @IBAction func ticketClicked() {
         delegate?.jump(sectionType: .tickets)
-        buttonTypeRelay.accept(.tickets)
+        changeDisplay(type: .tickets)
     }
     
-    // FacilityViewController では、 PageLinkView を複数個で運用している為
-    // 選択中のデザインを同期する為に、 FacilityViewController から操作できる
-    // 公開メソッドにする
     func changeDisplay(type: ViewController.SectionType) {
         resetDisplay()
         let selectedColor = UIColor.red
         switch type {
-        /*
-        case .detail:
+        case .basicInformation:
             detailButton.isSelected = true
             detailButtonBottomLineView.backgroundColor = selectedColor
         case .experiences:
             experienceButton.isSelected = true
             experienceButtonBottomLineView.backgroundColor = selectedColor
-        */
         case .tickets:
             ticketButton.isSelected = true
             ticketButtonBottomLineView.backgroundColor = selectedColor

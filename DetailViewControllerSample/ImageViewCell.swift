@@ -10,4 +10,9 @@ import UIKit
 
 class ImageViewCell: UITableViewCell {
     @IBOutlet weak var mainImageView: UIImageView!
+    @IBOutlet weak var pageLinkView: PageLinkView!
+    
+    func setup(delegate: PageLinkActionable?) {
+        pageLinkView.setup(delegate: delegate)
+    }
 }

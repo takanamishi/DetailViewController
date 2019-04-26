@@ -46,6 +46,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="mainImageView" destination="X4w-Zo-gY9" id="hok-jR-ToD"/>
+                <outlet property="pageLinkView" destination="4aa-2f-fvS" id="Umg-JD-UqN"/>
             </connections>
             <point key="canvasLocation" x="221.73913043478262" y="163.05803571428569"/>
         </tableViewCell>

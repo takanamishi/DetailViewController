@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.register(nibWithCellClass: ImageViewCell.self)
+            tableView.register(nibWithCellClass: BasicInformationCell.self)
+            tableView.register(nibWithCellClass: ExperiencesCell.self)
             tableView.register(nibWithCellClass: TicketsCell.self)
         }
     }
@@ -38,8 +40,8 @@ class ViewController: UIViewController {
         
         // 上には statusbar 分しか余白がないはずなのに * 2 しないとうまくいかない。
         scrollViewTopConstraint.constant = -statusBarHeight * 2
-        
         navigationClear()
+        fixedPageLinkView.setup(delegate: self)
     }
     
     private func navigationClear() {
@@ -53,13 +55,15 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     enum SectionType: Int {
         case image = 0
+        case basicInformation
+        case experiences
         case tickets
         
         var numberOfRowsInSection: Int {
             switch self {
-            case .image:
+            case .image, .basicInformation:
                 return 1
-            case .tickets:
+            case .experiences, .tickets:
                 return 2
             }
         }
@@ -74,7 +78,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,6 +89,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         switch SectionType.get(section: indexPath.section) {
         case .image:
             let cell = tableView.dequeueReusableCell(withClass: ImageViewCell.self, for: indexPath)
+            cell.setup(delegate: self)
+            return cell
+        case .basicInformation:
+            let cell = tableView.dequeueReusableCell(withClass: BasicInformationCell.self, for: indexPath)
+            return cell
+        case .experiences:
+            let cell = tableView.dequeueReusableCell(withClass: ExperiencesCell.self, for: indexPath)
             return cell
         case .tickets:
             let cell = tableView.dequeueReusableCell(withClass: TicketsCell.self, for: indexPath)
@@ -120,6 +131,17 @@ extension ViewController: UIScrollViewDelegate {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
+    }
+}
+
+extension ViewController: PageLinkActionable {
+    func jump(sectionType: SectionType) {
+        fixedPageLinkView.changeDisplay(type: sectionType)
+        // statusBarHeight * 2 は contentOffset.y が -44pt からスタートする為
+        let adjustment = (statusBarHeight * 2) + navigationBar.frame.height + fixedPageLinkView.frame.height
+        let indexPath = IndexPath(row: 0, section: sectionType.rawValue)
+        let targetScrollPosition = tableView.rectForRow(at: indexPath).origin.y - adjustment
+        tableView.setContentOffset(CGPoint(x: 0, y: targetScrollPosition), animated: true)
     }
 }
 
