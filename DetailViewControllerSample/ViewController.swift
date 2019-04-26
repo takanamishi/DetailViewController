@@ -17,6 +17,11 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var scrollViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var fixedPageLinkView: PageLinkView! {
+        didSet {
+            fixedPageLinkView.isHidden = true
+        }
+    }
     private var statusBarHeight: CGFloat {
         return UIApplication.shared.statusBarFrame.size.height
     }
@@ -91,6 +96,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         switchNavigation()
+        fixedPageLinkView.isHidden = !isScrollOverImageViewCell
     }
     
     private func switchNavigation() {

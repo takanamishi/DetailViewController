@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XP8-cR-v7U">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XP8-cR-v7U">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -26,29 +26,42 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="7tT-Xs-iu0"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hM8-Nx-WFY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="86W-DG-xt1">
-                                        <barButtonItem key="leftBarButtonItem" image="icon_back" id="sJO-2e-XVd"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="zCc-Wf-GUn"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xr9-Z7-Ptf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="94"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hM8-Nx-WFY">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <items>
+                                            <navigationItem title="Title" id="86W-DG-xt1">
+                                                <barButtonItem key="leftBarButtonItem" image="icon_back" id="sJO-2e-XVd"/>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="action" id="zCc-Wf-GUn"/>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1X-gC-7YR" customClass="PageLinkView" customModule="DetailViewControllerSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="KxV-ep-xS1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XP8-cR-v7U" secondAttribute="trailing" id="6NV-tv-jHy"/>
-                            <constraint firstItem="hM8-Nx-WFY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GuC-FY-qsv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xr9-Z7-Ptf" secondAttribute="trailing" id="JyY-F4-joe"/>
+                            <constraint firstItem="xr9-Z7-Ptf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UXQ-Bf-Br9"/>
+                            <constraint firstItem="xr9-Z7-Ptf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fO4-Yw-iTM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XP8-cR-v7U" secondAttribute="bottom" id="glQ-Ug-kp1"/>
-                            <constraint firstItem="hM8-Nx-WFY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="reZ-Gg-ark"/>
-                            <constraint firstItem="hM8-Nx-WFY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uda-UW-hIP"/>
                             <constraint firstItem="XP8-cR-v7U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wiW-uk-Mrz"/>
                             <constraint firstItem="XP8-cR-v7U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xmV-RG-oFJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="fixedPageLinkView" destination="e1X-gC-7YR" id="90V-jv-Txn"/>
                         <outlet property="navigationBar" destination="hM8-Nx-WFY" id="Syj-Kb-KcL"/>
                         <outlet property="scrollViewTopConstraint" destination="wiW-uk-Mrz" id="dx5-bg-icP"/>
                         <outlet property="tableView" destination="XP8-cR-v7U" id="AgK-gX-t8X"/>

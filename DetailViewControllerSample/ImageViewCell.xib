@@ -11,31 +11,43 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="324" id="8Kp-Sf-GKZ" customClass="ImageViewCell" customModule="DetailViewControllerSample" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="427" height="324"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="445" id="8Kp-Sf-GKZ" customClass="ImageViewCell" customModule="DetailViewControllerSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="432" height="445"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Kp-Sf-GKZ" id="0jK-T6-mq4">
-                <rect key="frame" x="0.0" y="0.0" width="427" height="323.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="432" height="444.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spot" translatesAutoresizingMaskIntoConstraints="NO" id="X4w-Zo-gY9">
-                        <rect key="frame" x="0.0" y="0.0" width="427" height="320.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="X4w-Zo-gY9" secondAttribute="height" multiplier="4:3" id="tDg-0E-eNT"/>
-                        </constraints>
-                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qCP-fG-KWx">
+                        <rect key="frame" x="0.0" y="0.0" width="432" height="374"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spot" translatesAutoresizingMaskIntoConstraints="NO" id="X4w-Zo-gY9">
+                                <rect key="frame" x="0.0" y="0.0" width="432" height="324"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="X4w-Zo-gY9" secondAttribute="height" multiplier="4:3" id="tDg-0E-eNT"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-2f-fvS" customClass="PageLinkView" customModule="DetailViewControllerSample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="324" width="432" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="f6I-UY-hYO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="X4w-Zo-gY9" secondAttribute="bottom" id="21J-Ns-KQe"/>
-                    <constraint firstItem="X4w-Zo-gY9" firstAttribute="leading" secondItem="0jK-T6-mq4" secondAttribute="leading" id="3vU-lM-7XT"/>
-                    <constraint firstItem="X4w-Zo-gY9" firstAttribute="top" secondItem="0jK-T6-mq4" secondAttribute="top" id="RkH-2g-pvp"/>
-                    <constraint firstAttribute="trailing" secondItem="X4w-Zo-gY9" secondAttribute="trailing" id="bQU-PO-hHq"/>
+                    <constraint firstItem="qCP-fG-KWx" firstAttribute="top" secondItem="0jK-T6-mq4" secondAttribute="top" id="DeM-u1-A7v"/>
+                    <constraint firstAttribute="trailing" secondItem="qCP-fG-KWx" secondAttribute="trailing" id="f8D-jd-3HA"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qCP-fG-KWx" secondAttribute="bottom" id="gMa-I2-DTG"/>
+                    <constraint firstItem="qCP-fG-KWx" firstAttribute="leading" secondItem="0jK-T6-mq4" secondAttribute="leading" id="irt-H5-myD"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="mainImageView" destination="X4w-Zo-gY9" id="hok-jR-ToD"/>
             </connections>
-            <point key="canvasLocation" x="218.11594202898553" y="123.21428571428571"/>
+            <point key="canvasLocation" x="221.73913043478262" y="163.05803571428569"/>
         </tableViewCell>
     </objects>
     <resources>

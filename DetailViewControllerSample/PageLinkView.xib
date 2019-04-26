@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageLinkView" customModule="ikoma" customModuleProvider="target">
+            <connections>
+                <outlet property="detailButton" destination="VbP-zT-2yC" id="5bf-Em-nRa"/>
+                <outlet property="detailButtonBottomLineView" destination="7qh-W6-rJk" id="uEI-on-MXz"/>
+                <outlet property="experienceButton" destination="o9G-vi-P9Y" id="U1v-qZ-SrI"/>
+                <outlet property="experienceButtonBottomLineView" destination="p3n-GH-CTn" id="2Lt-AR-ELr"/>
+                <outlet property="ticketButton" destination="FLs-lq-3iJ" id="tK2-6u-oag"/>
+                <outlet property="ticketButtonBottomLineView" destination="Lw9-fp-DK2" id="cAw-IE-5i7"/>
+                <outlet property="ticketView" destination="qy3-G9-5V4" id="8L9-nf-UFz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hso-6Z-EYT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOe-LA-8hP" userLabel="Line View">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="0uP-c1-Lme"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f7x-WQ-b8L">
+                            <rect key="frame" x="0.0" y="1" width="375" height="98"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E1O-x7-MbN">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="98"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbP-zT-2yC">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="95"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <state key="normal" title="基本情報">
+                                                <color key="titleColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="selected">
+                                                <color key="titleColor" red="0.93725490199999995" green="0.28627450980000002" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="detailClicked" destination="-1" eventType="touchUpInside" id="IQT-gd-cXl"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qh-W6-rJk">
+                                            <rect key="frame" x="0.0" y="95" width="125" height="3"/>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.28627450980000002" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="3" id="xGG-wQ-idF"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NY0-yH-KhA">
+                                    <rect key="frame" x="125" y="0.0" width="125" height="98"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9G-vi-P9Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="95"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <state key="normal" title="口コミ">
+                                                <color key="titleColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="selected">
+                                                <color key="titleColor" red="0.93725490199999995" green="0.28627450980000002" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="experienceClicked" destination="-1" eventType="touchUpInside" id="9je-N3-L2g"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3n-GH-CTn">
+                                            <rect key="frame" x="0.0" y="95" width="125" height="3"/>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.28627450980000002" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="3" id="9nf-wN-q9j"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qy3-G9-5V4">
+                                    <rect key="frame" x="250" y="0.0" width="125" height="98"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLs-lq-3iJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="95"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <state key="normal" title="チケット">
+                                                <color key="titleColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="selected">
+                                                <color key="titleColor" red="0.93725490199999995" green="0.28627450980000002" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="ticketClicked" destination="-1" eventType="touchUpInside" id="NC4-Pe-cUB"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lw9-fp-DK2">
+                                            <rect key="frame" x="0.0" y="95" width="125" height="3"/>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.28627450980000002" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="3" id="IOc-Zk-fwH"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXq-bW-zKc" userLabel="Line View">
+                            <rect key="frame" x="0.0" y="99" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Krw-j2-9lv"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hso-6Z-EYT" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="5B8-8S-kEV"/>
+                <constraint firstItem="hso-6Z-EYT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Tj6-X1-lDl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hso-6Z-EYT" secondAttribute="bottom" id="nrH-lx-kPd"/>
+                <constraint firstItem="hso-6Z-EYT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rUq-AV-s6S"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
